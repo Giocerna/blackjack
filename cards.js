@@ -7,7 +7,7 @@ function Deck() {
     this.cards = [];
     this.cardsDrawn = 0;
     var suits = ["spades", "diamonds", "hearts", "clubs"];
-    var names = ["ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"];
+    var names = ["ace", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king"];
     for (var suit in suits) {
         for (var name in names) {
             this.cards.push(new Card(names[name], suits[suit]));
@@ -48,7 +48,6 @@ Card.prototype.value = function () {
 };
 
 function Player() {
-    //this.name;
     this.cards = [];
 }
 Player.prototype.addCard = function () {
