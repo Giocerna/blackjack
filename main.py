@@ -32,8 +32,8 @@ app = webapp2.WSGIApplication([
 
 class SecondHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/webs.html')
+        template = jinja_environment.get_template('templates/rules.html')
         self.response.write(template.render())
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/Rules', SecondHandler)
+    ('/Rules', SecondHandler)])
