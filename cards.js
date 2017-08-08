@@ -1,18 +1,3 @@
-/*Object Oriented Blackjack
-
-A Game has: Players
-Dealer
-Deck
-
-A Player / Dealer has: Score
-Cards
-
-A Score has: Game Logic
-Current Score
-
-
-A Deck has: Cards
-*/
 function Game() {
     this.currentTurnIndex = 0;
     this.deck = new Deck();
@@ -33,16 +18,13 @@ function Deck() {
 Deck.prototype.getCard = function () {
     if (this.cards.length == this.cardsDrawn) {
         return null;
-    } //case: check if all cards drawn
-
+    }
     var random = Math.floor(Math.random() * (this.cards.length - this.cardsDrawn));
     var temp = this.cards[random];
 
-    //swap chosen card with card last in array
     this.cards[random] = this.cards[this.cards.length - this.cardsDrawn - 1];
     this.cards[this.cards.length - this.cardsDrawn - 1] = temp;
     this.cardsDrawn++;
-
     return temp;
 };
 
@@ -69,7 +51,6 @@ function Player() {
     //this.name;
     this.cards = [];
 }
-
 Player.prototype.addCard = function () {
     this.cards.push(deck.getCard());
 };
@@ -79,7 +60,7 @@ Player.prototype.score = function () {
     var aces = [];
 
     for (var i = 0; i < this.cards.length; i++) {
-        var value = this.cards[i].value() // value array ex.[10]
+        var value = this.cards[i].value()
         if (value.length == 1) {
             score += value[0];
         } else {
@@ -95,24 +76,14 @@ Player.prototype.score = function () {
         }
     }
     return score;
-
 };
 
 var deck = new Deck();
 var player1 = new Player();
 
-
 $("#getCard").click(function () {
     player1.addCard();
-
-
-
-
     var cardName = player1.cards[player1.cards.length-1].name;
     var cardSuit = player1.cards[player1.cards.length-1].suit;
     $("#table").append(cardName + cardSuit);
-
-
-
-
 });
