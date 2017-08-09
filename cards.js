@@ -37,9 +37,8 @@ function shuffle(){
   }
 }
 
-
-function printDeck(){
-  for (var i = 0; i < 52; i++){
-    console.log(deck[i]);
-  }
-}
+// function printDeck(){
+//   for (var i = 0; i < 52; i++){
+//     console.log(deck[i]);
+//   }
+// }
