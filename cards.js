@@ -6,6 +6,7 @@ var cards = [
 ];
 
 var deck = []; //should be a shuffled deck
+var hand = [];
 
 //returns true is the card drawn is in the deck, false if it's not
 function alreadyThere(value){
@@ -36,15 +37,24 @@ function shuffle(){
     deck.push(draw());
   }
 }
-
+shuffle();
 // function printDeck(){
 //   for (var i = 0; i < 52; i++){
 //     console.log(deck[i]);
 //   }
 // }
-function counter(cards){
+function counter(hand){
   var count = 0;
-  for(k = 0; k < cards.length;k++){
+  for (var i = 0; i < hand.length; i++){
+    if (hand[i][0] == 'j' || hand[i][0] == 'k' || hand[i][0] == 'q') {
+      count += 10;
+    }
+     else {
+       count += parseInt(hand[i][0]);
+     }
+  }
+  /*
+  for(k = 0; k < 52;k++){
     if (deck[k] == '2h' || deck[k] == '2s' || deck[k] == '2c' || deck[k] == '2d')
     count += 2
 
@@ -81,4 +91,7 @@ function counter(cards){
     else if (deck[k] == 'kh' || deck[k] == 'ks' || deck[k] == 'kc' || deck[k] == 'kd')
     count += 10
     }
+    console.log(count)
+    */
   }
+  counter();
