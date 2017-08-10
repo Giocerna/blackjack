@@ -42,7 +42,7 @@ class ThirdHandler(webapp2.RequestHandler):
 
 class FourthHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/test.html')
+        template = jinja_environment.get_template('templates/test_two.html')
         self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
