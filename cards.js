@@ -6,7 +6,6 @@ var cards = [
 ];
 
 var deck = []; //should be a shuffled deck
-var hand = [];
 
 //returns true is the card drawn is in the deck, false if it's not
 function alreadyThere(value){
@@ -33,8 +32,12 @@ function draw(){
 
 //in this function: get random cards and put them into deck
 function shuffle(){
-  while (deck.length != 52){
+  if (deck.length < 6 || counter(cards) <= 21){
     deck.push(draw());
+  else {
+    text('You Busted')
+  }
+    }
   }
 }
 shuffle();
@@ -43,81 +46,8 @@ shuffle();
 //     console.log(deck[i]);
 //   }
 // }
-function counter(hand){
-  var count = 0;
-  for (var i = 0; i < hand.length; i++){
-    if (hand[i][0] == 'j' || hand[i][0] == 'k' || hand[i][0] == 'q') {
-      count += 10;
-    }
-     else {
-       count += parseInt(hand[i][0]);
-     }
-     else {
-       (hand[i][0] == '2')
-      count += 2;
-        else {
-          count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '3')
-      count += 3;
-        else {
-          count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '4')
-      count += 4;
-      else {
-        count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '5')
-      count += 5;
-      else {
-        count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '6')
-      count += 6;
-      else {
-        count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '7')
-      count += 7;
-      else {
-        count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '8')
-      count += 8;
-      else {
-        count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '9')
-       count += 9;
-       else {
-         count += parseInt(hand[i][0]);
-        }
-      }
-     else {
-       (hand[i][0] == '10')
-      count += 10;
-      else {
-        count += parseInt(hand[i][0]);
-        }
-      }
-  }
-  /*
-  for(k = 0; k < 52;k++){
+function counter(deck){
+  for(k = 0; k < deck.length;k++){
     if (deck[k] == '2h' || deck[k] == '2s' || deck[k] == '2c' || deck[k] == '2d')
     count += 2
 
@@ -154,7 +84,6 @@ function counter(hand){
     else if (deck[k] == 'kh' || deck[k] == 'ks' || deck[k] == 'kc' || deck[k] == 'kd')
     count += 10
     }
-    console.log(count)
-    */
+    return count;
   }
   counter();
