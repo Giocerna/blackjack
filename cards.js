@@ -46,44 +46,99 @@ shuffle();
 //     console.log(deck[i]);
 //   }
 // }
+
 function counter(deck){
   for(k = 0; k < deck.length;k++){
     if (deck[k] == '2h' || deck[k] == '2s' || deck[k] == '2c' || deck[k] == '2d')
-    count += 2
+    score += 2
 
     else if (deck[k] == '3h' || deck[k] == '3s' || deck[k] == '3c' || deck[k] == '3d')
-    count += 3
+    score += 3
 
     else if (deck[k] == '4h' || deck[k] == '4s' || deck[k] =='4c' || deck[k] == '4d')
-    count += 4
 
+    score += 4
     else if (deck[k] == '5h' || deck[k] == '5s' || deck[k] =='5c' || deck[k] == '5d')
-    count += 5
+    score += 5
 
+    score += 6
     else if (deck[k] == '6h' || deck[k] == '6s' || deck[k] == '6c' || deck[k] == '6d')
-    count += 6
 
     else if (deck[k] == '7h' || deck[k] == '7s' || deck[k] == '7c' || deck[k] == '7d')
-    count += 7
+    score += 7
 
     else if (deck[k] == '8h' || deck[k] == '8s' || deck[k] == '8c' || deck[k] == '8d')
-    count += 8
+    score += 8
 
     else if (deck[k] == '9h' || deck[k] == '9s' || deck[k] == '9c' || deck[k] == '9d')
-    count += 9
+    score += 9
 
     else if (deck[k] == '10h' || deck[k] == '10s' || deck[k] == '10c' || deck[k] == '10d')
-    count += 10
+    score += 10
 
     else if (deck[k] == 'jh' || deck[k] == 'js' || deck[k] == 'jc' || deck[k] == 'jd')
-    count += 10
+    score += 10
 
     else if (deck[k] == 'qh' || deck[k] == 'qs' || deck[k] == 'qc' || deck[k] == 'qd')
-    count += 10
+    score += 10
 
     else if (deck[k] == 'kh' || deck[k] == 'ks' || deck[k] == 'kc' || deck[k] == 'kd')
-    count += 10
+    score += 10
+
+    else if (deck[k] == 'ah' || deck[k]== 'as' || deck[k] == 'ac' || deck [k] == 'ad'){
+    if (score >=11) {score += 1}
+    else score += 11
+
     }
-    return count;
+    return score;
   }
+}
   counter();
+
+  function dealersCounter(deck){
+    for(k = 0; k < deck.length;k++){
+      if (deck[k] == '2h' || deck[k] == '2s' || deck[k] == '2c' || deck[k] == '2d')
+      dealersScore += 2
+
+      else if (deck[k] == '3h' || deck[k] == '3s' || deck[k] == '3c' || deck[k] == '3d')
+      dealersScore += 3
+
+      else if (deck[k] == '4h' || deck[k] == '4s' || deck[k] =='4c' || deck[k] == '4d')
+
+      dealersScore += 4
+      else if (deck[k] == '5h' || deck[k] == '5s' || deck[k] =='5c' || deck[k] == '5d')
+      dealersScore += 5
+
+      else if (deck[k] == '6h' || deck[k] == '6s' || deck[k] == '6c' || deck[k] == '6d')
+      dealersScore += 6
+
+      else if (deck[k] == '7h' || deck[k] == '7s' || deck[k] == '7c' || deck[k] == '7d')
+      dealersScore += 7
+
+      else if (deck[k] == '8h' || deck[k] == '8s' || deck[k] == '8c' || deck[k] == '8d')
+      dealersScore += 8
+
+      else if (deck[k] == '9h' || deck[k] == '9s' || deck[k] == '9c' || deck[k] == '9d')
+      dealersScore += 9
+
+      else if (deck[k] == '10h' || deck[k] == '10s' || deck[k] == '10c' || deck[k] == '10d')
+      dealersScore += 10
+
+      else if (deck[k] == 'jh' || deck[k] == 'js' || deck[k] == 'jc' || deck[k] == 'jd')
+      dealersScore += 10
+
+      else if (deck[k] == 'qh' || deck[k] == 'qs' || deck[k] == 'qc' || deck[k] == 'qd')
+      dealersScore += 10
+
+      else if (deck[k] == 'kh' || deck[k] == 'ks' || deck[k] == 'kc' || deck[k] == 'kd')
+      dealersScore += 10
+
+      else if (deck[k] == 'ah' || deck[k]== 'as' || deck[k] == 'ac' || deck [k] == 'ad'){
+      if (core >=11) {score += 1}
+      else score += 11
+
+      }
+      return score;
+    }
+  }
+    counter();
