@@ -61,8 +61,8 @@ function counter(deck){
     else if (deck[k] == '5h' || deck[k] == '5s' || deck[k] =='5c' || deck[k] == '5d')
     score += 5
 
-    score += 6
     else if (deck[k] == '6h' || deck[k] == '6s' || deck[k] == '6c' || deck[k] == '6d')
+    score += 6
 
     else if (deck[k] == '7h' || deck[k] == '7s' || deck[k] == '7c' || deck[k] == '7d')
     score += 7
@@ -134,11 +134,11 @@ function counter(deck){
       dealersScore += 10
 
       else if (deck[k] == 'ah' || deck[k]== 'as' || deck[k] == 'ac' || deck [k] == 'ad'){
-      if (core >=11) {score += 1}
-      else score += 11
+      if (dealersScore >=11) {dealersScore += 1}
+      else dealersScore += 11
 
       }
-      return score;
+      return dealersScore;
     }
   }
-    counter();
+    dealersCounter();
