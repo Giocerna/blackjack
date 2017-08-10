@@ -37,7 +37,7 @@ class SecondHandler(webapp2.RequestHandler):
 
 class ThirdHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/Thanks.html')
+        template = jinja_environment.get_template('templates/thanks.html')
         self.response.write(template.render())
 
 class FourthHandler(webapp2.RequestHandler):
