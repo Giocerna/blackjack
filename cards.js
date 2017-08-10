@@ -52,6 +52,69 @@ function counter(hand){
      else {
        count += parseInt(hand[i][0]);
      }
+     else {
+       (hand[i][0] == '2')
+      count += 2;
+        else {
+          count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '3')
+      count += 3;
+        else {
+          count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '4')
+      count += 4;
+      else {
+        count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '5')
+      count += 5;
+      else {
+        count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '6')
+      count += 6;
+      else {
+        count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '7')
+      count += 7;
+      else {
+        count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '8')
+      count += 8;
+      else {
+        count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '9')
+       count += 9;
+       else {
+         count += parseInt(hand[i][0]);
+        }
+      }
+     else {
+       (hand[i][0] == '10')
+      count += 10;
+      else {
+        count += parseInt(hand[i][0]);
+        }
+      }
   }
   /*
   for(k = 0; k < 52;k++){
